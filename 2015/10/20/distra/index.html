@@ -3,15 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>晓克的博客</title>
+    <title>迪杰斯特拉算法 | 晓克的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="晓克的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+        <meta name="keywords" content="C++,数据结构" />
+    
+    <meta name="description" content="迪杰斯特拉算法模板
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455/*==================================================*\| Dijkstra 数组实现 O（N^2）| Dijkstra --">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迪杰斯特拉算法">
+<meta property="og:url" content="http://yoursite.com/2015/10/20/distra/index.html">
 <meta property="og:site_name" content="晓克的博客">
+<meta property="og:description" content="迪杰斯特拉算法模板
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455/*==================================================*\| Dijkstra 数组实现 O（N^2）| Dijkstra --">
+<meta property="og:updated_time" content="2016-11-29T12:30:35.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="晓克的博客">
+<meta name="twitter:title" content="迪杰斯特拉算法">
+<meta name="twitter:description" content="迪杰斯特拉算法模板
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455/*==================================================*\| Dijkstra 数组实现 O（N^2）| Dijkstra --">
     
 
     
@@ -116,120 +125,117 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">主页</em>
+    <a class="page-title-link" href="/categories/算法/">算法</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
+                            <article id="post-distra" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        迪杰斯特拉算法
+        </h1>
+    
 
-    
-    
+            </header>
         
         
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
+            <div class="article-subtitle">
+                <a href="/2015/10/20/distra/" class="article-date">
+    <time datetime="2015-10-19T22:49:50.000Z" itemprop="datePublished">2015-10-20</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/2015/10/20/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2015/10/20/hello-world/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <p>迪杰斯特拉算法模板</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*==================================================*\</span></div><div class="line">| Dijkstra 数组实现 O（N^2）</div><div class="line">| Dijkstra ---  数组实现( 在此基础上可直接改为STL 的Queue 实现)</div><div class="line">| lowcost[] --- beg 到其他点的最近距离</div><div class="line">| preNode[] -- beg 为根展开的树，记录父亲结点</div><div class="line">\*==================================================*/</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> INF 0x03F3F3F3F</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100</span>;</div><div class="line"><span class="comment">// visited 表示是否访问过</span></div><div class="line"><span class="keyword">int</span> preNode[N];</div><div class="line"><span class="keyword">int</span> visited[N];</div><div class="line"><span class="keyword">int</span> Map[N][N];</div><div class="line"><span class="keyword">int</span> lowdist[N];</div><div class="line"></div><div class="line"><span class="keyword">int</span> n;<span class="comment">// 点数</span></div><div class="line"></div><div class="line"><span class="comment">// 开始点数</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">(<span class="keyword">int</span> beg)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="built_in">memset</span>(visited, <span class="number">0</span>, <span class="keyword">sizeof</span>(visited));</div><div class="line">	<span class="keyword">int</span> i, j, min;</div><div class="line">	</div><div class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i&lt;n; i++)</div><div class="line">	&#123;</div><div class="line">		lowdist[i] = Map[beg][i];</div><div class="line">		preNode[i] = i;</div><div class="line">	&#125;</div><div class="line">	lowdist[beg] = <span class="number">0</span>;</div><div class="line">	preNode[beg] = <span class="number">-1</span>;  <span class="comment">//  树根的标记</span></div><div class="line"></div><div class="line">		</div><div class="line">	<span class="keyword">int</span> index = beg;</div><div class="line">	visited[index] = <span class="number">1</span>;	<span class="comment">//访问过了</span></div><div class="line"></div><div class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i&lt;n; i++)	<span class="comment">// 这个是n次</span></div><div class="line">	&#123;</div><div class="line">		min = INF;</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j&lt;n; j++)</div><div class="line">			<span class="keyword">if</span> (visited[j] == <span class="number">0</span> &amp;&amp; lowdist[j] &lt; min)</div><div class="line">			&#123;</div><div class="line">				min = lowdist[j];</div><div class="line">				index = j;</div><div class="line">			&#125;</div><div class="line">		visited[index] = <span class="number">1</span>;</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)</div><div class="line">			<span class="comment">//  下面的加法可能导致溢出,INF 不能取太大</span></div><div class="line">			<span class="keyword">if</span> (visited[j] == <span class="number">0</span> &amp;&amp; lowdist[index] + Map[index][j] &lt; lowdist[j])</div><div class="line">			&#123;</div><div class="line">				lowdist[j] = lowdist[index] + Map[index][j];</div><div class="line">				preNode[j] = index;</div><div class="line">			&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/算法/">算法</a>
-            </p>
-            <p class="date"><time datetime="2015-10-19T22:49:50.000Z" itemprop="datePublished">2015-10-20</time></p>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2015/10/20/hello-world/">Hello World</a>
-        </h1>
-    
+        <footer class="article-footer">
+            
 
-        <p class="article-excerpt">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-        </p>
+
+
+    <a data-url="http://yoursite.com/2015/10/20/distra/" data-id="ciw3h9u3g00007gven0zyh1in" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2015/10/20/distra/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2015/10/20/distra/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/算法/">算法</a>
-            </p>
-            <p class="date"><time datetime="2015-10-19T22:49:50.000Z" itemprop="datePublished">2015-10-20</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2015/10/20/distra/">迪杰斯特拉算法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            迪杰斯特拉算法模板
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455/*==================================================*\| Dijkstra 数组实现 O（N^2）| Dijkstra --
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
+
     
-        </div>
-    
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -289,6 +295,23 @@ Quick
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2015/10/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Hello World
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -426,11 +449,13 @@ Quick
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2015/10/20/distra/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
