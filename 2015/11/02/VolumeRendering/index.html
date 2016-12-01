@@ -3,24 +3,27 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hello World | 晓克的博客</title>
+    <title>VolumeRendering | 晓克的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="C++,数据结构" />
+        <meta name="keywords" content="Volume Rendering" />
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+    <meta name="description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
+Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
+rendering">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/10/20/hello-world/index.html">
+<meta property="og:title" content="VolumeRendering">
+<meta property="og:url" content="http://yoursite.com/2015/11/02/VolumeRendering/index.html">
 <meta property="og:site_name" content="晓克的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-11-29T12:31:23.978Z">
+<meta property="og:description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
+Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
+rendering">
+<meta property="og:updated_time" content="2016-12-01T15:21:38.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="VolumeRendering">
+<meta name="twitter:description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
+Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
+rendering">
     
 
     
@@ -125,18 +128,18 @@ Quick">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/算法/">算法</a>
+    <a class="page-title-link" href="/categories/Rendering/">Rendering</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-hello-world" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-VolumeRendering" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Hello World
+        VolumeRendering
         </h1>
     
 
@@ -144,25 +147,63 @@ Quick">
         
         
             <div class="article-subtitle">
-                <a href="/2015/10/20/hello-world/" class="article-date">
-    <time datetime="2015-10-19T22:49:50.000Z" itemprop="datePublished">2015-10-20</time>
+                <a href="/2015/11/02/VolumeRendering/" class="article-date">
+    <time datetime="2015-11-02T06:30:29.000Z" itemprop="datePublished">2015-11-02</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”</p>
+<p>Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)</p>
+<h2 id="rendering-approaches"><a href="#rendering-approaches" class="headerlink" title="rendering approaches"></a>rendering approaches</h2><ul>
+<li>DVR: Direct Volume Rendering</li>
+<li>IVR: Indirect Volume Rendering</li>
+</ul>
+<p>图片：<a href="http://www.byclb.com/TR/Tutorials/volume_rendering/" target="_blank" rel="external">http://www.byclb.com/TR/Tutorials/volume_rendering/</a></p>
+<h2 id="IVR"><a href="#IVR" class="headerlink" title="IVR"></a>IVR</h2><p>Fit geometric primitives through data,then render.</p>
+<ul>
+<li>Marching Cubes</li>
+<li>Surface tracking</li>
+<li>fourier Transform rendering</li>
+<li>Pros and cons:<ul>
+<li>Huge amounts of pre-processing on dataset</li>
+<li>fitting geometric primitives introduces errors</li>
+<li>not all datasets can be easily approximated with geometric primitives</li>
+</ul>
+</li>
+</ul>
+<h2 id="DVR"><a href="#DVR" class="headerlink" title="DVR"></a>DVR</h2><ul>
+<li><p>Techniques:</p>
+<ul>
+<li>Using Texture Mapping(2D/3D)</li>
+<li>Splatting</li>
+<li>Shear Warp</li>
+<li>Ray Casting</li>
+</ul>
+</li>
+<li><p>Classes:</p>
+<ul>
+<li>Object order: Iterate over Voxels<ul>
+<li>project each voxel on image plane</li>
+</ul>
+</li>
+<li>Image order: Iterate over Pixels<ul>
+<li>How does the voxel set influence a single pixel’s color</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Texture-Mapping"><a href="#Texture-Mapping" class="headerlink" title="Texture Mapping"></a>Texture Mapping</h2><ul>
+<li>Most popular DVR method is Image-order method</li>
+<li>Original concept: take “slices” out of data set, render them back to front with alpha blending.</li>
+<li>problem: for correct perspective need slices perpendicular to view direction, interpolating values is expensive. this is 3D texture mapping</li>
+</ul>
+<p>###2D Texture mapping</p>
 
         </div>
         <footer class="article-footer">
@@ -170,7 +211,7 @@ Quick">
 
 
 
-    <a data-url="http://yoursite.com/2015/10/20/hello-world/" data-id="ciw1fp4ol0000w8vec3uwzspq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2015/11/02/VolumeRendering/" data-id="ciw53v4hy0000rgveheq8e5df" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -306,20 +347,10 @@ Quick">
         
 <nav id="article-nav">
     
-        <a href="/2015/10/22/hexoNote/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            Hexo 使用心得
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2015/10/20/distra/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2015/10/22/hexoNote/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">迪杰斯特拉算法</p>
+        <p class="article-nav-title">Hexo 使用心得</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -502,7 +533,7 @@ Quick">
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2015/10/20/hello-world/';
+    var disqus_url = 'http://yoursite.com/2015/11/02/VolumeRendering/';
     
     (function() {
     var dsq = document.createElement('script');
