@@ -22,7 +22,7 @@ markdown 支持Latex  上https://github.com/akfish/hexo-math 只需要输入如�
 
 1234npm install hexo-math --save	plugins:  hexo-math
 $$\frac">
-<meta property="og:updated_time" content="2016-12-02T05:05:55.775Z">
+<meta property="og:updated_time" content="2016-12-02T08:18:30.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 使用心得">
 <meta name="twitter:description" content="markdown使用的编码，为了显示汉字需要调节为UTF-8 无BOM
@@ -75,7 +75,7 @@ $$\frac">
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Rendering/">Rendering</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/心得/">心得</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法/">算法</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ML/">ML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Rendering/">Rendering</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/心得/">心得</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法/">算法</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -173,6 +173,11 @@ $$\frac">
 <ul>
 <li>在hueman主题下面的_config.yml 不同步，只需要删除或者更改git 文件.gitignore就可以</li>
 </ul>
+<ul>
+<li>安装hexo-math之后可能存在着公式正确当时显示不出来，这是因为，Latex与Markdown冲突，<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$$\lim _&#123; x\rightarrow \infty  &#125;&#123; \sum _&#123; k=<span class="number">1</span> &#125;^&#123; x &#125;&#123; \frac &#123; \<span class="built_in">sin</span> &#123; k &#125; +\<span class="built_in">cos</span> &#123; k &#125;  &#125;&#123; k &#125;  &#125;  &#125; $$</div><div class="line"></div><div class="line"></div><div class="line">$$\lim \_&#123; x\rightarrow \infty  &#125;&#123; \sum \_&#123; k=<span class="number">1</span> &#125;^&#123; x &#125;&#123; \frac &#123; \<span class="built_in">sin</span> &#123; k &#125; +\<span class="built_in">cos</span> &#123; k &#125;  &#125;&#123; k &#125;  &#125;  &#125; $$</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Markdown中 <em>斜体</em> 是斜体的语法，跳脱字元就能解决这个问题了。就是加\</p>
 
         </div>
         <footer class="article-footer">
@@ -180,7 +185,7 @@ $$\frac">
 
 
 
-    <a data-url="http://yoursite.com/2015/10/22/hexoNote/" data-id="ciw7df8ef0006vkvejj58phkn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2015/10/22/hexoNote/" data-id="ciw7sumhl000so8ve1nfxphwd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -348,6 +353,46 @@ $$\frac">
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/12/02/target/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/12/02/target/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-12-02T06:43:28.939Z" itemprop="datePublished">2016-12-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/03/01/K-means/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png)" alt="K-means" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/ML/">ML</a></p>
+                            <p class="item-title"><a href="/2016/03/01/K-means/" class="title">K-means</a></p>
+                            <p class="item-date"><time datetime="2016-03-01T01:23:05.000Z" itemprop="datePublished">2016-03-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2015/11/02/VolumeRendering/" class="thumbnail">
     
     
@@ -405,46 +450,6 @@ $$\frac">
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2015/10/20/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/算法/">算法</a></p>
-                            <p class="item-title"><a href="/2015/10/20/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2015-10-19T22:49:50.000Z" itemprop="datePublished">2015-10-20</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2015/10/02/githubNote/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/心得/">心得</a></p>
-                            <p class="item-title"><a href="/2015/10/02/githubNote/" class="title">Github使用新的</a></p>
-                            <p class="item-date"><time datetime="2015-10-02T04:32:20.000Z" itemprop="datePublished">2015-10-02</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -454,7 +459,7 @@ $$\frac">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Rendering/">Rendering</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/">心得</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ML/">ML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rendering/">Rendering</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/">心得</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -464,7 +469,7 @@ $$\frac">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -474,7 +479,7 @@ $$\frac">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -484,7 +489,7 @@ $$\frac">
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Volume-Rendering/" style="font-size: 10px;">Volume Rendering</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/数据结构/" style="font-size: 20px;">数据结构</a>
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Volume-Rendering/" style="font-size: 10px;">Volume Rendering</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/数据结构/" style="font-size: 20px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
         </div>
     </div>
 

@@ -34,7 +34,7 @@ gitignore语法
 [abc]代表可选的字符范围
 名称前面是路径分隔符(/)，表示忽略在此目录下的该文件
 名称最后面是/，表示忽略整个目录，">
-<meta property="og:updated_time" content="2016-12-02T06:05:29.687Z">
+<meta property="og:updated_time" content="2016-12-02T06:30:37.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github使用新的">
 <meta name="twitter:description" content="Git中忽略某些文件或者文件夹想要忽略某些文件或者文件夹主要要修改文件.gitignore，例如1234567# Python:*.py[cod]*.so*.egg*.egg-infodistbuild
@@ -93,7 +93,7 @@ gitignore语法
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Rendering/">Rendering</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/心得/">心得</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法/">算法</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ML/">ML</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Rendering/">Rendering</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/前端/">前端</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/心得/">心得</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/算法/">算法</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -195,7 +195,9 @@ gitignore语法
 <li>通过在名称前面加！，代表不忽略</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 这行是注释</div><div class="line">*.a                   # 忽略所有 .a 伟扩展名的文件</div><div class="line">!lib.a                # 但是 lib.a 不忽略，即时之前设置了忽略所有的 .a</div><div class="line">/TODO            # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略 </div><div class="line">build/               # 忽略所有的 build/ 目录下文件</div><div class="line">doc<span class="comment">/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt</span></div></pre></td></tr></table></figure>
-<p>$$/frac{a}{b}$$</p>
+<h2 id="git-命令大全"><a href="#git-命令大全" class="headerlink" title="git 命令大全"></a>git 命令大全</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line">git init                                                  # 初始化本地git仓库（创建新仓库）</div><div class="line">git config --global user.name "xxx"                       # 配置用户名</div><div class="line">git config --global user.email "xxx@xxx.com"              # 配置邮件</div><div class="line">git config --global color.ui true                         # git status等命令自动着色</div><div class="line">git config --global color.status auto</div><div class="line">git config --global color.diff auto</div><div class="line">git config --global color.branch auto</div><div class="line">git config --global color.interactive auto</div><div class="line">git config --global --unset http.proxy                    # remove  proxy configuration on git</div><div class="line">git clone git+ssh://git@192.168.53.168/VT.git             # clone远程仓库</div><div class="line">git status                                                # 查看当前版本状态（是否修改）</div><div class="line">git add xyz                                               # 添加xyz文件至index</div><div class="line">git add .                                                 # 增加当前子目录下所有更改过的文件至index</div><div class="line">git commit -m 'xxx'                                       # 提交</div><div class="line">git commit --amend -m 'xxx'                               # 合并上一次提交（用于反复修改）</div><div class="line">git commit -am 'xxx'                                      # 将add和commit合为一步</div><div class="line">git rm xxx                                                # 删除index中的文件</div><div class="line">git rm -r *                                               # 递归删除</div><div class="line">git log                                                   # 显示提交日志</div><div class="line">git log -1                                                # 显示1行日志 -n为n行</div><div class="line">git log -5</div><div class="line">git log --stat                                            # 显示提交日志及相关变动文件</div><div class="line">git log -p -m</div><div class="line">git show dfb02e6e4f2f7b573337763e5c0013802e392818         # 显示某个提交的详细内容</div><div class="line">git show dfb02                                            # 可只用commitid的前几位</div><div class="line">git show HEAD                                             # 显示HEAD提交日志</div><div class="line">git show HEAD^                                            # 显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本 ^5为上5个版本</div><div class="line">git tag                                                   # 显示已存在的tag</div><div class="line">git tag -a v2.0 -m 'xxx'                                  # 增加v2.0的tag</div><div class="line">git show v2.0                                             # 显示v2.0的日志及详细内容</div><div class="line">git log v2.0                                              # 显示v2.0的日志</div><div class="line">git diff                                                  # 显示所有未添加至index的变更</div><div class="line">git diff --cached                                         # 显示所有已添加index但还未commit的变更</div><div class="line">git diff HEAD^                                            # 比较与上一个版本的差异</div><div class="line">git diff HEAD -- ./lib                                    # 比较与HEAD版本lib目录的差异</div><div class="line">git diff origin/master..master                            # 比较远程分支master上有本地分支master上没有的</div><div class="line">git diff origin/master..master --stat                     # 只显示差异的文件，不显示具体内容</div><div class="line">git remote add origin git+ssh://git@192.168.53.168/VT.git # 增加远程定义（用于push/pull/fetch）</div><div class="line">git branch                                                # 显示本地分支</div><div class="line">git branch --contains 50089                               # 显示包含提交50089的分支</div><div class="line">git branch -a                                             # 显示所有分支</div><div class="line">git branch -r                                             # 显示所有原创分支</div><div class="line">git branch --merged                                       # 显示所有已合并到当前分支的分支</div><div class="line">git branch --no-merged                                    # 显示所有未合并到当前分支的分支</div><div class="line">git branch -m master master_copy                          # 本地分支改名</div><div class="line">git checkout -b master_copy                               # 从当前分支创建新分支master_copy并检出</div><div class="line">git checkout -b master master_copy                        # 上面的完整版</div><div class="line">git checkout features/performance                         # 检出已存在的features/performance分支</div><div class="line">git checkout --track hotfixes/BJVEP933                    # 检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</div><div class="line">git checkout v2.0                                         # 检出版本v2.0</div><div class="line">git checkout -b devel origin/develop                      # 从远程分支develop创建新本地分支devel并检出</div><div class="line">git checkout -- README                                    # 检出head版本的README文件（可用于修改错误回退）</div><div class="line">git merge origin/master                                   # 合并远程master分支至当前分支</div><div class="line">git cherry-pick ff44785404a8e                             # 合并提交ff44785404a8e的修改</div><div class="line">git push origin master                                    # 将当前分支push到远程master分支</div><div class="line">git push origin :hotfixes/BJVEP933                        # 删除远程仓库的hotfixes/BJVEP933分支</div><div class="line">git push --tags                                           # 把所有tag推送到远程仓库</div><div class="line">git fetch                                                 # 获取所有远程分支（不更新本地分支，另需merge）</div><div class="line">git fetch --prune                                         # 获取所有原创分支并清除服务器上已删掉的分支</div><div class="line">git pull origin master                                    # 获取远程分支master并merge到当前分支</div><div class="line">git mv README README2                                     # 重命名文件README为README2</div><div class="line">git reset --hard HEAD                                     # 将当前版本重置为HEAD（通常用于merge失败回退）</div><div class="line">git rebase</div><div class="line">git branch -d hotfixes/BJVEP933                           # 删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）</div><div class="line">git branch -D hotfixes/BJVEP933                           # 强制删除分支hotfixes/BJVEP933</div><div class="line">git ls-files                                              # 列出git index包含的文件</div><div class="line">git show-branch                                           # 图示当前分支历史</div><div class="line">git show-branch --all                                     # 图示所有分支历史</div><div class="line">git whatchanged                                           # 显示提交历史对应的文件修改</div><div class="line">git revert dfb02e6e4f2f7b573337763e5c0013802e392818       # 撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818</div><div class="line">git ls-tree HEAD                                          # 内部命令：显示某个git对象</div><div class="line">git rev-parse v2.0                                        # 内部命令：显示某个ref对于的SHA1 HASH</div><div class="line">git reflog                                                # 显示所有提交，包括孤立节点</div><div class="line">git show HEAD@&#123;5&#125;</div><div class="line">git show master@&#123;yesterday&#125;                               # 显示master分支昨天的状态</div><div class="line">git log --pretty=format:'%h %s' --graph                   # 图示提交日志</div><div class="line">git show HEAD~3</div><div class="line">git show -s --pretty=raw 2be7fcb476</div><div class="line">git stash                                                 # 暂存当前修改，将所有至为HEAD状态</div><div class="line">git stash list                                            # 查看所有暂存</div><div class="line">git stash show -p stash@&#123;0&#125;                               # 参考第一次暂存</div><div class="line">git stash apply stash@&#123;0&#125;                                 # 应用第一次暂存</div><div class="line">git grep "delete from"                                    # 文件中搜索文本“delete from”</div><div class="line">git grep -e '#define' --and -e SORT_DIRENT</div><div class="line">git gc</div><div class="line">git fsck</div></pre></td></tr></table></figure>
+<h2 id="git教程"><a href="#git教程" class="headerlink" title="git教程"></a>git教程</h2><p>参考博客：<a href="http://blog.csdn.net/ithomer/article/details/7527877" target="_blank" rel="external">http://blog.csdn.net/ithomer/article/details/7527877</a></p>
+<p>Git是一个版本控制工具，</p>
 
         </div>
         <footer class="article-footer">
@@ -203,7 +205,7 @@ gitignore语法
 
 
 
-    <a data-url="http://yoursite.com/2015/10/02/githubNote/" data-id="ciw7df8e60001vkvefufo92eh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2015/10/02/githubNote/" data-id="ciw7sumhg000ro8velmfdx2ab" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -365,6 +367,46 @@ gitignore语法
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2016/12/02/target/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/12/02/target/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2016-12-02T06:43:28.939Z" itemprop="datePublished">2016-12-02</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/03/01/K-means/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png)" alt="K-means" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/ML/">ML</a></p>
+                            <p class="item-title"><a href="/2016/03/01/K-means/" class="title">K-means</a></p>
+                            <p class="item-date"><time datetime="2016-03-01T01:23:05.000Z" itemprop="datePublished">2016-03-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2015/11/02/VolumeRendering/" class="thumbnail">
     
     
@@ -422,46 +464,6 @@ gitignore语法
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2015/10/20/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/算法/">算法</a></p>
-                            <p class="item-title"><a href="/2015/10/20/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2015-10-19T22:49:50.000Z" itemprop="datePublished">2015-10-20</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2015/10/02/githubNote/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/心得/">心得</a></p>
-                            <p class="item-title"><a href="/2015/10/02/githubNote/" class="title">Github使用新的</a></p>
-                            <p class="item-date"><time datetime="2015-10-02T04:32:20.000Z" itemprop="datePublished">2015-10-02</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -471,7 +473,7 @@ gitignore语法
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Rendering/">Rendering</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/">心得</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ML/">ML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rendering/">Rendering</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/心得/">心得</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -481,7 +483,7 @@ gitignore语法
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -491,7 +493,7 @@ gitignore语法
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -501,7 +503,7 @@ gitignore语法
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Volume-Rendering/" style="font-size: 10px;">Volume Rendering</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/数据结构/" style="font-size: 20px;">数据结构</a>
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Volume-Rendering/" style="font-size: 10px;">Volume Rendering</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/数据结构/" style="font-size: 20px;">数据结构</a> <a href="/tags/机器学习/" style="font-size: 10px;">机器学习</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
         </div>
     </div>
 

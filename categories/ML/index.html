@@ -3,27 +3,15 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>VolumeRendering | 晓克的博客</title>
+    <title>分类：: ML | 晓克的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Volume Rendering" />
-    
-    <meta name="description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
-Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
-rendering">
-<meta property="og:type" content="article">
-<meta property="og:title" content="VolumeRendering">
-<meta property="og:url" content="http://yoursite.com/2015/11/02/VolumeRendering/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="晓克的博客">
+<meta property="og:url" content="http://yoursite.com/categories/ML/index.html">
 <meta property="og:site_name" content="晓克的博客">
-<meta property="og:description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
-Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
-rendering">
-<meta property="og:updated_time" content="2016-12-01T15:21:38.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VolumeRendering">
-<meta name="twitter:description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
-Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
-rendering">
+<meta name="twitter:title" content="晓克的博客">
     
 
     
@@ -128,162 +116,74 @@ rendering">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Rendering/">Rendering</a>
+    <i class="icon fa fa-folder-open"></i>分类：: <em class="page-title-link">ML</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-VolumeRendering" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2016/03/01/K-means/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png)" alt="K-means" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/03/01/K-means/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/ML/">ML</a>
+            </p>
+            <p class="date"><time datetime="2016-03-01T01:23:05.000Z" itemprop="datePublished">2016-03-01</time></p>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        VolumeRendering
+        <a href="/2016/03/01/K-means/">K-means</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-subtitle">
-                <a href="/2015/11/02/VolumeRendering/" class="article-date">
-    <time datetime="2015-11-02T06:30:29.000Z" itemprop="datePublished">2015-11-02</time>
-</a>
-                
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a></li></ul>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p>Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”</p>
-<p>Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)</p>
-<h2 id="rendering-approaches"><a href="#rendering-approaches" class="headerlink" title="rendering approaches"></a>rendering approaches</h2><ul>
-<li>DVR: Direct Volume Rendering</li>
-<li>IVR: Indirect Volume Rendering</li>
-</ul>
-<p>图片：<a href="http://www.byclb.com/TR/Tutorials/volume_rendering/" target="_blank" rel="external">http://www.byclb.com/TR/Tutorials/volume_rendering/</a></p>
-<h2 id="IVR"><a href="#IVR" class="headerlink" title="IVR"></a>IVR</h2><p>Fit geometric primitives through data,then render.</p>
-<ul>
-<li>Marching Cubes</li>
-<li>Surface tracking</li>
-<li>fourier Transform rendering</li>
-<li>Pros and cons:<ul>
-<li>Huge amounts of pre-processing on dataset</li>
-<li>fitting geometric primitives introduces errors</li>
-<li>not all datasets can be easily approximated with geometric primitives</li>
-</ul>
-</li>
-</ul>
-<h2 id="DVR"><a href="#DVR" class="headerlink" title="DVR"></a>DVR</h2><ul>
-<li><p>Techniques:</p>
-<ul>
-<li>Using Texture Mapping(2D/3D)</li>
-<li>Splatting</li>
-<li>Shear Warp</li>
-<li>Ray Casting</li>
-</ul>
-</li>
-<li><p>Classes:</p>
-<ul>
-<li>Object order: Iterate over Voxels<ul>
-<li>project each voxel on image plane</li>
-</ul>
-</li>
-<li>Image order: Iterate over Pixels<ul>
-<li>How does the voxel set influence a single pixel’s color</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Texture-Mapping"><a href="#Texture-Mapping" class="headerlink" title="Texture Mapping"></a>Texture Mapping</h2><ul>
-<li>Most popular DVR method is Image-order method</li>
-<li>Original concept: take “slices” out of data set, render them back to front with alpha blending.</li>
-<li>problem: for correct perspective need slices perpendicular to view direction, interpolating values is expensive. this is 3D texture mapping</li>
-</ul>
-<p>###2D Texture mapping</p>
-
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="http://yoursite.com/2015/11/02/VolumeRendering/" data-id="ciw7sumgt0006o8vebrom3iin" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+        <p class="article-excerpt">
+            目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
+
+
 
                         </div>
                     </section>
@@ -343,29 +243,6 @@ rendering">
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/03/01/K-means/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            K-means
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2015/10/22/hexoNote/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Hexo 使用心得</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -563,13 +440,11 @@ rendering">
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2015/11/02/VolumeRendering/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

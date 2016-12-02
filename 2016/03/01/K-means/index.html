@@ -3,27 +3,23 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>VolumeRendering | 晓克的博客</title>
+    <title>K-means | 晓克的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Volume Rendering" />
+        <meta name="keywords" content="机器学习,算法" />
     
-    <meta name="description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
-Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
-rendering">
+    <meta name="description" content="目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VolumeRendering">
-<meta property="og:url" content="http://yoursite.com/2015/11/02/VolumeRendering/index.html">
+<meta property="og:title" content="K-means">
+<meta property="og:url" content="http://yoursite.com/2016/03/01/K-means/index.html">
 <meta property="og:site_name" content="晓克的博客">
-<meta property="og:description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
-Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
-rendering">
-<meta property="og:updated_time" content="2016-12-01T15:21:38.934Z">
+<meta property="og:description" content="目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png">
+<meta property="og:updated_time" content="2016-12-02T13:01:12.033Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VolumeRendering">
-<meta name="twitter:description" content="Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”
-Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)
-rendering">
+<meta name="twitter:title" content="K-means">
+<meta name="twitter:description" content="目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png">
     
 
     
@@ -128,18 +124,18 @@ rendering">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Rendering/">Rendering</a>
+    <a class="page-title-link" href="/categories/ML/">ML</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-VolumeRendering" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-K-means" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        VolumeRendering
+        K-means
         </h1>
     
 
@@ -147,63 +143,67 @@ rendering">
         
         
             <div class="article-subtitle">
-                <a href="/2015/11/02/VolumeRendering/" class="article-date">
-    <time datetime="2015-11-02T06:30:29.000Z" itemprop="datePublished">2015-11-02</time>
+                <a href="/2016/03/01/K-means/" class="article-date">
+    <time datetime="2016-03-01T01:23:05.000Z" itemprop="datePublished">2016-03-01</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Volume-Rendering/">Volume Rendering</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Definition: “Techniques in computer graphics used to project a 3D sample set onto a 2D image.”</p>
-<p>Input:2D slices,3D scan data,Conversions(Point cloud to voxel grid,Polygon mesh to voxel grid)</p>
-<h2 id="rendering-approaches"><a href="#rendering-approaches" class="headerlink" title="rendering approaches"></a>rendering approaches</h2><ul>
-<li>DVR: Direct Volume Rendering</li>
-<li>IVR: Indirect Volume Rendering</li>
-</ul>
-<p>图片：<a href="http://www.byclb.com/TR/Tutorials/volume_rendering/" target="_blank" rel="external">http://www.byclb.com/TR/Tutorials/volume_rendering/</a></p>
-<h2 id="IVR"><a href="#IVR" class="headerlink" title="IVR"></a>IVR</h2><p>Fit geometric primitives through data,then render.</p>
+            <p>目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形状。</p>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>已知观测集$(x_1,x_2,…,x_n)$,其中每个观测都是一个d-维实向量，k-means聚类要把这n个观测划分到k个集合中(k&lt;=n),使得组内平方和(WCSS,within-cluster sum of squares)最小。他的目标是找到是的下式满足的聚类$S_i$:</p>
+<p>$$arg\min _s=\sum _{i=1}^k\sum _{x \in S _i}{||x-u_i||}^2$$</p>
+<p>其中$u_i$是$S_i$的所有点的均值。</p>
+<h2 id="标准算法"><a href="#标准算法" class="headerlink" title="标准算法"></a>标准算法</h2><p>最常用额算法使用了迭代优化的技术，有时被称为Lloyd算法。</p>
 <ul>
-<li>Marching Cubes</li>
-<li>Surface tracking</li>
-<li>fourier Transform rendering</li>
-<li>Pros and cons:<ul>
-<li>Huge amounts of pre-processing on dataset</li>
-<li>fitting geometric primitives introduces errors</li>
-<li>not all datasets can be easily approximated with geometric primitives</li>
+<li>给定初始的k个均值点$m_1^{(1)},…,m_k^{(1)}$. 算法按照如下两部交替进行</li>
+<li>分配(Assignment): 将每个观测带你分配到聚类中使得组内平方和(WCSS)达到最小。(数学上类似：Voronoi图，来判断)，注意每个点只被分配到一个确定的聚类中，尽管存在很多情况</li>
+<li>更新(Update) 计算上一步得到聚类中，每一聚类观测值的图心，作为新的均值点</li>
 </ul>
+<p>$$m _i^{t+1}=\frac{1}{|S _i^{(t)}|}\sum _{x _j\in S_i^{(i)}}x _j$$</p>
+<p>,注意：因为算数平均数是最小二乘估计，所以这一步同样起到了减小目标函数组内平方和(WCSS)的值。</p>
+<p>最终收敛到局部最优解，注意：标准算法的目标函数是组内平方和(WCSS)，按照“最小二乘和”(欧氏距离)来分配。如果使用不同的距离函数，可能导致无法收敛，也可能得到k-means的变种：球体k-means，和k-中心点算法。</p>
+<h2 id="初始化方法"><a href="#初始化方法" class="headerlink" title="初始化方法"></a>初始化方法</h2><ul>
+<li><p>Forgy: 随机的从数据集中选择k个观测作为初始的均值点，Forgy方法易于使得初始均值点散开。对于期望-最大化(EM)算法和标准k-均值算法，Forgy方法作为初始化方法的表现会更好一些。</p>
+</li>
+<li><p>随机划分(Random Partition)：随机的为每一观测指定聚类，然后运行“更新(Updata)”步骤，随机划分方法则把均值点都放到靠近数据集中心的地方。可知随机划分方法一般更适用于k-调和均值和模糊k-均值算法。</p>
 </li>
 </ul>
-<h2 id="DVR"><a href="#DVR" class="headerlink" title="DVR"></a>DVR</h2><ul>
-<li><p>Techniques:</p>
+<p>注：把“分配”步骤视为“期望”步骤，把“更新”步骤视为“最大化步骤”，可以看到，这一算法实际上是广义期望-最大化算法（GEM）的一个变体。</p>
+<h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><ul>
+<li>在d维空间中找到k均值聚类问题的最优解的计算复杂度：NP-hard.</li>
+<li>如果k和d都是固定，时间复杂度是$O(n^{dk+1}\log n)$</li>
+<li>Lloyds算法的运行时间通常为$O(nkdi)$,i 表示直到收敛时的迭代次数。</li>
+<li>Lloyds算法在实践中通常被认为几乎是线性复杂度的。</li>
+</ul>
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><p>使得k-均值算法效率很高的两个关键特征同时也被经常被视为它最大的缺陷：</p>
 <ul>
-<li>Using Texture Mapping(2D/3D)</li>
-<li>Splatting</li>
-<li>Shear Warp</li>
-<li>Ray Casting</li>
+<li>聚类数目k是一个输入参数。选择不恰当的k值可能会导致糟糕的聚类结果。这也是为什么要进行特征检查来决定数据集的聚类数目了。</li>
+<li>收敛到局部最优解，可能导致“反直观”的错误结果。</li>
 </ul>
-</li>
-<li><p>Classes:</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
+<li>向量的量化</li>
+</ul>
+<p>例如在计算机图形学中，色彩量化的任务，就是要把一张图像的色彩范围减少到一个固定的数目k上来。k-均值算法就能很容易地被用来处理这一任务，并得到不错的结果。其它得向量量化的例子有非随机抽样</p>
+<div align="center"><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png" alt="vector Quantization"><br> </div>
+
+
 <ul>
-<li>Object order: Iterate over Voxels<ul>
-<li>project each voxel on image plane</li>
-</ul>
+<li><p>聚类分析</p>
 </li>
-<li>Image order: Iterate over Pixels<ul>
-<li>How does the voxel set influence a single pixel’s color</li>
-</ul>
+<li><p>特征学习<br>在（半）监督学习或无监督学习中，k-均值聚类被用来进行特征学习（或字典学习）步骤[18]。基本方法是，首先使用输入数据训练出一个k-均值聚类表示，然后把任意的输入数据投射到这一新的特征空间。 k-均值的这一应用能成功地与自然语言处理和计算机视觉中半监督学习的简单线性分类器结合起来。在对象识别任务中，它能展现出与其他复杂特征学习方法（如自动编码器、受限Boltzmann机等）相当的效果。然而，相比复杂方法，它需要更多的数据来达到相同的效果，因为每个数据点都只贡献了一个特征（而不是多重特征）。</p>
 </li>
 </ul>
-</li>
+<h2 id="相似问题"><a href="#相似问题" class="headerlink" title="相似问题"></a>相似问题</h2><p>目标函数是使得聚类平方误差最小化的算法还有k-中心点(k-medoids)算法，该方法保持聚类的中心在一个真实数据点上，亦即使用中心而非图心作为均值点。</p>
+<h2 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h2><ul>
+<li>K-means++</li>
+<li>Centroidal Voronoi tessellation</li>
 </ul>
-<h2 id="Texture-Mapping"><a href="#Texture-Mapping" class="headerlink" title="Texture Mapping"></a>Texture Mapping</h2><ul>
-<li>Most popular DVR method is Image-order method</li>
-<li>Original concept: take “slices” out of data set, render them back to front with alpha blending.</li>
-<li>problem: for correct perspective need slices perpendicular to view direction, interpolating values is expensive. this is 3D texture mapping</li>
-</ul>
-<p>###2D Texture mapping</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.pluskid.org/?p=57" target="_blank" rel="external">http://blog.pluskid.org/?p=57</a><br><a href="https://zh.wikipedia.org/wiki/K-%E5%B9%B3%E5%9D%87%E7%AE%97%E6%B3%95" target="_blank" rel="external">https://zh.wikipedia.org/wiki/K-%E5%B9%B3%E5%9D%87%E7%AE%97%E6%B3%95</a></p>
+<p><a href="http://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html" target="_blank" rel="external">http://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html</a><br><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/20/k-means.html" target="_blank" rel="external">http://www.cnblogs.com/leoo2sk/archive/2010/09/20/k-means.html</a><br><a href="http://shiyanjun.cn/archives/1375.html" target="_blank" rel="external">http://shiyanjun.cn/archives/1375.html</a><br><a href="http://blog.csdn.net/zouxy09/article/details/17589329" target="_blank" rel="external">http://blog.csdn.net/zouxy09/article/details/17589329</a><br><a href="http://blog.csdn.net/u012162613/article/details/47811235" target="_blank" rel="external">http://blog.csdn.net/u012162613/article/details/47811235</a><br><a href="http://coolshell.cn/articles/7779.html" target="_blank" rel="external">http://coolshell.cn/articles/7779.html</a><br><a href="http://www.csuldw.com/2015/06/03/2015-06-03-ml-algorithm-K-means/" target="_blank" rel="external">http://www.csuldw.com/2015/06/03/2015-06-03-ml-algorithm-K-means/</a><br><a href="https://wizardforcel.gitbooks.io/dm-algo-top10/content/k-means.html" target="_blank" rel="external">https://wizardforcel.gitbooks.io/dm-algo-top10/content/k-means.html</a><br><a href="http://blog.jqian.net/post/k-means.html" target="_blank" rel="external">http://blog.jqian.net/post/k-means.html</a><br><a href="http://blog.sina.com.cn/s/blog_62186b46010145ne.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_62186b46010145ne.html</a><br><a href="http://blog.jobbole.com/16048/" target="_blank" rel="external">http://blog.jobbole.com/16048/</a><br><a href="http://dataunion.org/7781.html" target="_blank" rel="external">http://dataunion.org/7781.html</a></p>
 
         </div>
         <footer class="article-footer">
@@ -211,7 +211,7 @@ rendering">
 
 
 
-    <a data-url="http://yoursite.com/2015/11/02/VolumeRendering/" data-id="ciw7sumgt0006o8vebrom3iin" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2016/03/01/K-means/" data-id="ciw7sumge0000o8ve6b8q8jfn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -347,20 +347,20 @@ rendering">
         
 <nav id="article-nav">
     
-        <a href="/2016/03/01/K-means/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2016/12/02/target/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            K-means
+            (no title)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2015/10/22/hexoNote/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2015/11/02/VolumeRendering/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Hexo 使用心得</p>
+        <p class="article-nav-title">VolumeRendering</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -563,7 +563,7 @@ rendering">
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2015/11/02/VolumeRendering/';
+    var disqus_url = 'http://yoursite.com/2016/03/01/K-means/';
     
     (function() {
     var dsq = document.createElement('script');
