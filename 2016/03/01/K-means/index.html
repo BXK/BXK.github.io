@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="机器学习,算法" />
     
-    <meta name="description" content="目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形">
+    <meta name="description" content="聚类是一种无监督的学习（无监督学习不依赖预先定义的类或带类标记的训练实例），它将相似的对象归到同一个簇中，它是观察式学习，而非示例式的学习，有点像全自动分类。所谓簇就是该集合中的对象有很大的相似性，而不同集合间的对象有很大的相异性。簇识别（cluster identification）给出了聚类结果的含义，告诉我们这些簇到底都是些什么。通常情况下，簇质心可以代表整个簇的数据来做出决策。聚类方法几乎">
 <meta property="og:type" content="article">
 <meta property="og:title" content="K-means">
 <meta property="og:url" content="http://yoursite.com/2016/03/01/K-means/index.html">
 <meta property="og:site_name" content="晓克的博客">
-<meta property="og:description" content="目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形">
+<meta property="og:description" content="聚类是一种无监督的学习（无监督学习不依赖预先定义的类或带类标记的训练实例），它将相似的对象归到同一个簇中，它是观察式学习，而非示例式的学习，有点像全自动分类。所谓簇就是该集合中的对象有很大的相似性，而不同集合间的对象有很大的相异性。簇识别（cluster identification）给出了聚类结果的含义，告诉我们这些簇到底都是些什么。通常情况下，簇质心可以代表整个簇的数据来做出决策。聚类方法几乎">
 <meta property="og:image" content="http://yoursite.com/images/kmeans01.jpg">
-<meta property="og:updated_time" content="2016-12-02T14:25:43.633Z">
+<meta property="og:updated_time" content="2016-12-02T15:26:45.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="K-means">
-<meta name="twitter:description" content="目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形">
+<meta name="twitter:description" content="聚类是一种无监督的学习（无监督学习不依赖预先定义的类或带类标记的训练实例），它将相似的对象归到同一个簇中，它是观察式学习，而非示例式的学习，有点像全自动分类。所谓簇就是该集合中的对象有很大的相似性，而不同集合间的对象有很大的相异性。簇识别（cluster identification）给出了聚类结果的含义，告诉我们这些簇到底都是些什么。通常情况下，簇质心可以代表整个簇的数据来做出决策。聚类方法几乎">
 <meta name="twitter:image" content="http://yoursite.com/images/kmeans01.jpg">
     
 
@@ -153,7 +153,10 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形状。</p>
+            <p>聚类是一种无监督的学习（无监督学习不依赖预先定义的类或带类标记的训练实例），它将相似的对象归到同一个簇中，它是观察式学习，而非示例式的学习，有点像全自动分类。所谓簇就是该集合中的对象有很大的相似性，而不同集合间的对象有很大的相异性。簇识别（cluster identification）给出了聚类结果的含义，告诉我们这些簇到底都是些什么。通常情况下，簇质心可以代表整个簇的数据来做出决策。聚类方法几乎可以应用于所有对象，簇内的对象越相似，聚类的效果越好。</p>
+<p>从机器学习的角度讲，簇相当于隐藏模式，聚类与分类的最大不同在于，分类学习的实例或数据对象有类别标记，而聚类则不一样，需要由聚类学习算法自动确定标记。因为其产生的结果与分类相同，而只是类别没有预先定义，所以聚类也被称为无监督分类（unsupervised classification )。</p>
+<p>目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形状。</p>
+<p>注: 聚类和分类最大的不同在于，分类的目标事先已知，而聚类则不一样。其产生的结果和分类相同，而只是类别没有预先定义。</p>
 <h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>已知观测集$(x_1,x_2,…,x_n)$,其中每个观测都是一个d-维实向量，k-means聚类要把这n个观测划分到k个集合中(k&lt;=n),使得组内平方和(WCSS,within-cluster sum of squares)最小。他的目标是找到是的下式满足的聚类$S_i$:</p>
 <p>$$arg\min _s=\sum _{i=1}^k\sum _{x \in S _i}{||x-u_i||}^2$$</p>
 <p>其中$u_i$是$S_i$的所有点的均值。</p>
@@ -166,8 +169,8 @@
 <p>$$m _i^{t+1}=\frac{1}{|S _i^{(t)}|}\sum _{x _j\in S_i^{(i)}}x _j$$</p>
 <p>,注意：因为算数平均数是最小二乘估计，所以这一步同样起到了减小目标函数组内平方和(WCSS)的值。</p>
 <p>最终收敛到局部最优解，注意：标准算法的目标函数是组内平方和(WCSS)，按照“最小二乘和”(欧氏距离)来分配。如果使用不同的距离函数，可能导致无法收敛，也可能得到k-means的变种：球体k-means，和k-中心点算法。</p>
-<p>算法的终止条件是图心基本不变，或者变化很小</p>
-<h2 id="收敛性分析"><a href="#收敛性分析" class="headerlink" title="收敛性分析"></a>收敛性分析</h2><p>定义畸变函数(distortion function):</p>
+<p>算法的终止条件1、指定了最大迭代次数，2、是图心基本不变，或者变化很小</p>
+<h2 id="收敛性分析"><a href="#收敛性分析" class="headerlink" title="收敛性分析"></a>收敛性分析</h2><p>定义代价函数:</p>
 <p>$$J(c,u)=\sum _{i=1}^m||x^{(i)}-u_{c^{(i)}}||^2$$</p>
 <p>它表示每个样本点到图心的欧式距离和。目标是要将其最小化，假设当前J没有达到最小，那么可以固定每个类的图心$u_j$，调整每个样例所属的类别$c^{(i)}$,让J函数减小，同样，固定$c^{(i)}$，调整每个类的图心$u_j$，也可以使J减小。这就是上面两个步骤使得J减小，最终收敛。</p>
 <h2 id="初始化方法"><a href="#初始化方法" class="headerlink" title="初始化方法"></a>初始化方法</h2><ul>
@@ -177,6 +180,7 @@
 </li>
 </ul>
 <p>注：把“分配”步骤视为“期望”E步骤，把“更新”步骤视为“最大化步骤M”，可以看到，这一算法实际上是广义期望-最大化算法（GEM）的一个变体。</p>
+<p>注：之前数据需要正则归一化，比如每一个维度归一到0-1之间，否则可能范围比较大的维度影响较大</p>
 <h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><ul>
 <li>在d维空间中找到k均值聚类问题的最优解的计算复杂度：NP-hard.</li>
 <li>如果k和d都是固定，时间复杂度是$O(n^{dk+1}\log n)$</li>
@@ -185,10 +189,14 @@
 </ul>
 <h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><p>使得k-均值算法效率很高的两个关键特征同时也被经常被视为它最大的缺陷：</p>
 <ul>
-<li>聚类数目k是一个输入参数。选择不恰当的k值可能会导致糟糕的聚类结果，这可能需要结合先验知识或者其它算法。这也是为什么要进行特征检查来决定数据集的聚类数目了。</li>
+<li>聚类数目k是一个输入参数。选择不恰当的k值可能会导致糟糕的聚类结果，这可能需要结合先验知识或者其它算法。（ISODATA 算法通过类的自动合并和分裂，得到较为合理的类型数目 K）这也是为什么要进行特征检查来决定数据集的聚类数目了。</li>
 <li>收敛到局部最优解，可能导致“反直观”的错误结果。</li>
-<li>k个图心的初始位置选择比较感冒</li>
+<li>k个图心的初始位置选择比较感冒，不同的初始位置可能会有完全不同的结果，(K-Means++可以用来解决这个问题，选取有效的初始点)</li>
 <li>对于非凸的数据，结果就不行了<br><img src="/images/kmeans01.jpg" width="80%" height="80%" align="center/"></li>
+<li>数据量比较大时候，比较高效，这是因为时间复杂度接近线性</li>
+<li>对离群点敏感，(它对于“躁声”和孤立点数据是敏感的，少量的该类数据能够对平均值产生极大的影响。)</li>
+<li>结果不稳定</li>
+<li>在簇的平均值被定义的情况下才能使用，这对于处理符号属性的数据不适用。</li>
 </ul>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ul>
 <li>向量的量化</li>
@@ -200,6 +208,9 @@
 <ul>
 <li>聚类分析<br>应用例子：<a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/20/k-means.html" target="_blank" rel="external">作者举得国足应用，比较通俗易懂</a></li>
 </ul>
+<p><a href="http://blog.csdn.net/u012162613/article/details/47811235&quot;&quot;" target="_blank" rel="external">作者举例的MNIST例子可以试着实现下</a></p>
+<p>分析一个公司的客户分类，这样可以对不同的客户使用不同的商业策略，或是电子商务中分析商品相似度，归类商品，从而可以使用一些不同的销售策略</p>
+<p>包括用户群划分、文本分类、图像识别等等。</p>
 <ul>
 <li>特征学习<br>在（半）监督学习或无监督学习中，k-均值聚类被用来进行特征学习（或字典学习）步骤[18]。基本方法是，首先使用输入数据训练出一个k-均值聚类表示，然后把任意的输入数据投射到这一新的特征空间。 k-均值的这一应用能成功地与自然语言处理和计算机视觉中半监督学习的简单线性分类器结合起来。在对象识别任务中，它能展现出与其他复杂特征学习方法（如自动编码器、受限Boltzmann机等）相当的效果。然而，相比复杂方法，它需要更多的数据来达到相同的效果，因为每个数据点都只贡献了一个特征（而不是多重特征）。</li>
 </ul>
@@ -209,6 +220,28 @@
 <li>Centroidal Voronoi tessellation</li>
 <li>牛逼的聚类的框架-canopy</li>
 <li>bisecting k-means算法（二分k-均值）</li>
+<li>密度聚类、层次聚类</li>
+<li>k-prototype算法</li>
+<li>k-中心点算法</li>
+</ul>
+<h2 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h2><h3 id="K-Means算法的K值如何选择"><a href="#K-Means算法的K值如何选择" class="headerlink" title="K-Means算法的K值如何选择"></a>K-Means算法的K值如何选择</h3><p>&lt;&lt;大数据&gt;&gt;中提到：给定一个合适的类簇指标，比如平均半径或直径，只要我们假设的类簇的数目等于或高于真实的类簇的数目时，该指标上升会很缓慢，而一旦试图得到少于真是数目的类簇时，该指标会急剧上升。</p>
+<ul>
+<li>簇的直径是指簇内任意两点之间的最大距离</li>
+<li>簇的半径是指簇内所有点到簇中心距离的最大值。</li>
+</ul>
+<p>###如何优化K-Means算法搜索的时间复杂度？<br>可以使用K-D树来缩短最近邻的搜索时间（NN算法都可以使用K-D树来优化时间复杂度）。</p>
+<p>###如何确定K个簇的初始质心？</p>
+<ul>
+<li><p>选择批次距离尽可能远的K个点<br>首先随机选择一个点作为第一个初始类簇中心点，然后选择距离该点最远的那个点作为第二个初始类簇中心点，然后再选择距离前两个点的最近距离最大的点作为第三个初始类簇的中心点，以此类推，直至选出K个初始类簇中心点。</p>
+</li>
+<li><p>选用层次聚类或者Canopy算法进行初始聚类，然后利用这些类簇的中心点作为KMeans算法初始类簇中心点。</p>
+</li>
+</ul>
+<h1 id="bisecting-k-means算法"><a href="#bisecting-k-means算法" class="headerlink" title="bisecting k-means算法"></a>bisecting k-means算法</h1><p>二分kmeans算法是为了克服kmeans算法局部最小值的问题而提出的。该算法首先将所有点作为一个簇，然后将该簇一分为二，之后选择其中一个簇继续划分，选择哪一个簇进行划分取决于其划分是否最大程度降低SSE值，不断迭代，直到得到用户指定的簇数目为止。</p>
+<h1 id="k-means-算法"><a href="#k-means-算法" class="headerlink" title="k-means++ 算法"></a>k-means++ 算法</h1><ul>
+<li>先从数据库随机挑个随机点当“种子点”</li>
+<li>对于每个点，我们都计算其和最近的一个“种子点”的距离$D(x)$并保存在一个数组里，然后把这些距离加起来得到$Sum(D(x))$</li>
+<li>然后，再去一个随机值，用权重的方式来计算下一个“种子点”。这个算法的实现是，</li>
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.pluskid.org/?p=57" target="_blank" rel="external">http://blog.pluskid.org/?p=57</a><br><a href="https://zh.wikipedia.org/wiki/K-%E5%B9%B3%E5%9D%87%E7%AE%97%E6%B3%95" target="_blank" rel="external">https://zh.wikipedia.org/wiki/K-%E5%B9%B3%E5%9D%87%E7%AE%97%E6%B3%95</a></p>
 <p><a href="http://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html" target="_blank" rel="external">http://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html</a><br><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/20/k-means.html" target="_blank" rel="external">http://www.cnblogs.com/leoo2sk/archive/2010/09/20/k-means.html</a><br><a href="http://shiyanjun.cn/archives/1375.html" target="_blank" rel="external">http://shiyanjun.cn/archives/1375.html</a><br><a href="http://blog.csdn.net/zouxy09/article/details/17589329" target="_blank" rel="external">http://blog.csdn.net/zouxy09/article/details/17589329</a><br><a href="http://blog.csdn.net/u012162613/article/details/47811235" target="_blank" rel="external">http://blog.csdn.net/u012162613/article/details/47811235</a><br><a href="http://coolshell.cn/articles/7779.html" target="_blank" rel="external">http://coolshell.cn/articles/7779.html</a><br><a href="http://www.csuldw.com/2015/06/03/2015-06-03-ml-algorithm-K-means/" target="_blank" rel="external">http://www.csuldw.com/2015/06/03/2015-06-03-ml-algorithm-K-means/</a><br><a href="https://wizardforcel.gitbooks.io/dm-algo-top10/content/k-means.html" target="_blank" rel="external">https://wizardforcel.gitbooks.io/dm-algo-top10/content/k-means.html</a><br><a href="http://blog.jqian.net/post/k-means.html" target="_blank" rel="external">http://blog.jqian.net/post/k-means.html</a><br><a href="http://blog.sina.com.cn/s/blog_62186b46010145ne.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_62186b46010145ne.html</a><br><a href="http://blog.jobbole.com/16048/" target="_blank" rel="external">http://blog.jobbole.com/16048/</a><br><a href="http://dataunion.org/7781.html" target="_blank" rel="external">http://dataunion.org/7781.html</a></p>
@@ -219,7 +252,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2016/03/01/K-means/" data-id="ciw7vur7300003gvev3eljiog" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2016/03/01/K-means/" data-id="ciw8zn3or0000e0ve4jme3ygo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

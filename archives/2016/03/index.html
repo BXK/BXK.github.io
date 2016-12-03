@@ -171,7 +171,7 @@
     
 
         <p class="article-excerpt">
-            目的把$n$个点划分到$k$个聚类中，使得每个点都属于离他最近的均值(聚类中心)对应的聚类，以之作为聚类的标准。因为这个问题在计算上是NP困难的，不过存在着启发式算法，使之收敛于一个局部最优解。这些算法通常类似于通过迭代优化方法处理高斯混合分布的最大期望算法(EM算法)。而且，它们都使用聚类中心来为数据建模，然而k-means倾向于在可比较的空间范围内寻找聚类，期望-最大化技术却允许聚类有不同的形
+            聚类是一种无监督的学习（无监督学习不依赖预先定义的类或带类标记的训练实例），它将相似的对象归到同一个簇中，它是观察式学习，而非示例式的学习，有点像全自动分类。所谓簇就是该集合中的对象有很大的相似性，而不同集合间的对象有很大的相异性。簇识别（cluster identification）给出了聚类结果的含义，告诉我们这些簇到底都是些什么。通常情况下，簇质心可以代表整个簇的数据来做出决策。聚类方法几乎
         </p>
     </div>
 </article>
@@ -466,23 +466,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
