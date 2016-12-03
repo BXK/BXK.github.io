@@ -22,7 +22,7 @@ markdown 支持Latex  上https://github.com/akfish/hexo-math 只需要输入如�
 
 1234npm install hexo-math --save	plugins:  hexo-math
 $$\frac">
-<meta property="og:updated_time" content="2016-12-02T08:18:30.143Z">
+<meta property="og:updated_time" content="2016-12-02T14:21:05.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 使用心得">
 <meta name="twitter:description" content="markdown使用的编码，为了显示汉字需要调节为UTF-8 无BOM
@@ -178,6 +178,11 @@ $$\frac">
 </li>
 </ul>
 <p>Markdown中 <em>斜体</em> 是斜体的语法，跳脱字元就能解决这个问题了。就是加\</p>
+<ul>
+<li>hexo 图片问题<br>要加入图片，应该在source下建立一个与_posts同级别的文件夹iamges，将图片放入。图片路径如下：<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/images/myImg.png</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>插入图片方法：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">![图片注释](/images/myImg.png “图片标题”)</div><div class="line">&lt;div align=<span class="string">"center"</span>&gt;</div><div class="line">&lt;img src=<span class="string">"https://mall_noblue_color_space.png"</span>  alt=<span class="string">"vector Quantization"</span> /&gt;</div><div class="line"> &lt;/div&gt;</div><div class="line"></div><div class="line">&lt;img src=<span class="string">"/images/myImg.png"</span> width=<span class="number">50</span>% height=<span class="number">50</span>% align=center/&gt;</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -185,7 +190,7 @@ $$\frac">
 
 
 
-    <a data-url="http://yoursite.com/2015/10/22/hexoNote/" data-id="ciw7sumhl000so8ve1nfxphwd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2015/10/22/hexoNote/" data-id="ciw7vur7j00093gve8aplsk53" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -376,7 +381,7 @@ $$\frac">
                             <a href="/2016/03/01/K-means/" class="thumbnail">
     
     
-        <span style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rosa_Gold_Glow_2_small_noblue_color_space.png/250px-Rosa_Gold_Glow_2_small_noblue_color_space.png)" alt="K-means" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/kmeans01.jpg)" alt="K-means" class="thumbnail-image"></span>
     
     
 </a>
